@@ -3,7 +3,7 @@ package com.nicootech.rabinhoodconstraintlayout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.transition.TransitionManager
-import android.widget.ImageView
+import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintSet
 import kotlinx.android.synthetic.main.activity_image.*
 
@@ -23,7 +23,7 @@ class ImageActivity : AppCompatActivity() {
         constraint2.clone(this, R.layout.activity_image_alt)
 
 
-        findViewById<ImageView>(R.id.imageView).setOnClickListener{
+        findViewById<Button>(R.id.button).setOnClickListener{
                 TransitionManager.beginDelayedTransition(mainroot)
                 val constraint = if(set) constraint1 else constraint2
                 constraint.applyTo(mainroot)
